@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.DetailsFragment">
+
+
+    <ScrollView
+        android:id="@+id/scrollViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/NewCustom_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="casual"
+                android:text="Customer Information"
+                android:textAlignment="center"
+                android:textColor="@color/MainColor"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:id="@+id/choose_Customer_iv"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:layout_marginTop="18sp"
+                android:src="@drawable/me"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/NewCustom_tv" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_image_Fbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_user"
+                android:tint="@color/liteColor"
+                android:visibility="gone"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="@id/choose_Customer_iv"
+                app:layout_constraintEnd_toEndOf="@id/choose_Customer_iv" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="12dp"
+                android:enabled="false"
+                android:focusableInTouchMode="true"
+                android:hint="  Name"
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="@color/MainColor"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/ScoundColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/choose_Customer_iv"
+                app:startIconDrawable="@drawable/ic_person">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:padding="12dp"
+                    android:textAlignment="textStart" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_age"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:enabled="false"
+                android:focusableInTouchMode="true"
+                android:hint="  Age"
+
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="@color/MainColor"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/ScoundColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tf_name"
+                app:startIconDrawable="@drawable/ic_age">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/age_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:textAlignment="textStart" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_Address"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:enabled="false"
+                android:focusableInTouchMode="true"
+                android:hint="  Address"
+
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="@color/MainColor"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/ScoundColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tf_age"
+                app:startIconDrawable="@drawable/ic_address">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Address_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:padding="12dp"
+                    android:textAlignment="textStart" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_phone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:enabled="false"
+                android:focusableInTouchMode="true"
+                android:hint="  Phone"
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="@color/MainColor"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/ScoundColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tf_Address"
+                app:startIconDrawable="@drawable/ic_telephone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phone_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:padding="12dp"
+                    android:textAlignment="textStart" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_ID"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="16dp"
+                android:enabled="false"
+                android:focusableInTouchMode="true"
+                android:hint="  National ID"
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="@color/MainColor"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/ScoundColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tf_phone"
+                app:startIconDrawable="@drawable/ic_profile">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ID_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:textAlignment="textStart" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_CustomerPrice"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="18sp"
+                android:layout_marginEnd="6dp"
+                android:enabled="false"
+                android:focusableInTouchMode="true"
+                android:hint="  Customer Price"
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="@color/MainColor"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/ScoundColor"
+                app:layout_constraintEnd_toStartOf="@id/tf_Percentage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tf_ID"
+                app:startIconDrawable="@drawable/ic_doller">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/CustomerPrice_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:padding="12dp"
+                    android:textAlignment="textStart" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_Percentage"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="18sp"
+                android:layout_marginEnd="12dp"
+                android:enabled="false"
+                android:focusableInTouchMode="true"
+                android:hint="  Percentage"
+                app:boxCornerRadiusBottomEnd="25dp"
+                app:boxCornerRadiusBottomStart="25dp"
+                app:boxCornerRadiusTopEnd="25dp"
+                app:boxCornerRadiusTopStart="25dp"
+                app:boxStrokeColor="@color/MainColor"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/ScoundColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tf_CustomerPrice"
+                app:layout_constraintTop_toBottomOf="@id/tf_ID"
+                app:startIconDrawable="@drawable/ic_percentage">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Percentage_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:padding="12dp"
+                    android:textAlignment="textStart" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/Date_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:elevation="25dp"
+                android:fontFamily="casual"
+                android:text="Date"
+                android:textAlignment="center"
+                android:textColor="@color/MainColor"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/Date_btn"
+                app:layout_constraintStart_toStartOf="@id/tf_CustomerPrice"
+                app:layout_constraintTop_toBottomOf="@id/tf_CustomerPrice" />
+
+            <ImageButton
+                android:id="@+id/Date_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?colorOnPrimary"
+                android:elevation="30dp"
+                android:src="@drawable/ic_date"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@id/Date_tv"
+                app:layout_constraintEnd_toEndOf="@id/tf_Percentage"
+                app:layout_constraintStart_toEndOf="@id/Date_tv"
+                app:layout_constraintTop_toTopOf="@id/Date_tv" />
+
+
+            <View
+                android:id="@+id/recy_view1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:background="?colorOnSecondary"
+                app:layout_constraintEnd_toStartOf="@id/recyHint_tv"
+                app:layout_constraintStart_toStartOf="@id/tf_ID"
+                app:layout_constraintTop_toBottomOf="@id/Date_tv" />
+
+            <TextView
+                android:id="@+id/recyHint_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Category"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/recy_view1"
+                app:layout_constraintEnd_toStartOf="@id/recy_view2"
+                app:layout_constraintStart_toEndOf="@id/recy_view1"
+                app:layout_constraintTop_toBottomOf="@id/Date_tv" />
+
+            <View
+                android:id="@+id/recy_view2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:background="?colorOnSecondary"
+                app:layout_constraintEnd_toEndOf="@id/tf_ID"
+                app:layout_constraintStart_toEndOf="@id/recyHint_tv"
+                app:layout_constraintTop_toBottomOf="@id/Date_tv" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_CateName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="18sp"
+                android:layout_marginEnd="4dp"
+                android:focusableInTouchMode="true"
+                android:hint="  Name"
+                android:visibility="gone"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxStrokeColor="@color/MainColor"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/ScoundColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tf_CateAmount"
+                app:layout_constraintTop_toBottomOf="@id/recy_view1"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/CateName_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    android:padding="12dp"
+                    android:textAlignment="center" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_CateAmount"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="18sp"
+                android:layout_marginEnd="4dp"
+                android:focusableInTouchMode="true"
+                android:hint="  Amount"
+                android:visibility="gone"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxStrokeColor="@color/MainColor"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/ScoundColor"
+                app:layout_constraintStart_toEndOf="@id/tf_CateName"
+                app:layout_constraintEnd_toStartOf="@id/tf_CatePrice"
+                app:layout_constraintTop_toBottomOf="@id/recy_view1"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/CateAmount_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:textAlignment="center" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_CatePrice"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="18sp"
+                android:layout_marginEnd="6dp"
+                android:focusableInTouchMode="true"
+                android:visibility="gone"
+                android:hint="  Price"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxStrokeColor="@color/MainColor"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/ScoundColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tf_CateAmount"
+                app:layout_constraintTop_toBottomOf="@id/recy_view1"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/CatePrice_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:padding="12dp"
+                    android:textAlignment="center" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Custom_Recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ScoundColor2"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingBottom="14dp"
+                app:layout_constraintCircleRadius="@dimen/cardview_default_elevation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tf_CateName" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="?colorOnSecondary"
+                app:layout_constraintTop_toBottomOf="@id/Custom_Recycler"
+                app:layout_constraintStart_toStartOf="@id/Custom_Recycler"
+                app:layout_constraintEnd_toEndOf="@id/Custom_Recycler"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/addNewCategory_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_add_24"
+                app:fabSize="mini"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@id/Custom_Recycler"
+                app:layout_constraintEnd_toEndOf="@id/Custom_Recycler"
+                app:layout_constraintStart_toEndOf="@id/Custom_Recycler"
+                app:layout_constraintTop_toTopOf="@id/Custom_Recycler" />
+
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/editFab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_edit"
+                android:tint="@color/liteColor"
+                app:fabSize="mini"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/processBar_recycle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
